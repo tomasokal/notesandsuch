@@ -30,15 +30,15 @@
 
 ### Preprocessing
 
-    * Can check correlation of outcome (target) and predictor (feature) using various statistical tests including:
-        * Peason's Correlation
-        * Linea Discriminant Analysis
-        * ANOVA
-        * Chi-Square
+  * Can check correlation of outcome (target) and predictor (feature) using various statistical tests including:
+    * Peason's Correlation
+    * Linea Discriminant Analysis
+    * ANOVA
+    * Chi-Square
         
 ### Model-Based
 
-    * Models such as LASSO and RIDGE have a built in feature selection due to the regularization in the algorithms.
+  * Models such as LASSO and RIDGE have a built in feature selection due to the regularization in the algorithms.
 
 ## Linear Models
 
@@ -75,9 +75,9 @@
 
 ## Machine Learning Models
 
-    * Will fall into one of two camps, Supervised Learning and Unsupervised Learning.
-        * Supervised Learning such as classification and regression will take observations, be trained on a set of the observations, and make predictions on test observations.
-        * Unsupervised Learning such as Clustering will take unlabeled observations.
+  * Will fall into one of two camps, Supervised Learning and Unsupervised Learning.
+    * Supervised Learning such as classification and regression will take observations, be trained on a set of the observations, and make predictions on test observations.
+    * Unsupervised Learning such as Clustering will take unlabeled observations.
 
 ### Decision Tree 
 
@@ -108,12 +108,64 @@
 
 ### K-Means
 
+  * Unsupervised learning 
+  
+#### Advantages
+
+  * Simple and will converge
+  * Scales with large data
+  * Easily adaptable
+
+#### Limitations
+
+  * Have to choose K manually
+  * Dependent on initial values
+  * Different size and density of clusters can cause issues
+  * Does not handle outliers well
+  * Does not handle large numbers of predictors (features)
+
+#### Assumptions
+
+  * Clusters will be spherical
+  * Clusters are of similar size
+
+#### Interpretation
+
+  * Select the cluster size (K) using elbow method (abrupt change in SSE)
+
 ### KNN
 
-### Neural Network
+  * Non-parametric supervised learning technique used for classification
+  
+#### Advantages
 
-f
+  * Easy with minimal assumptions needed
+  * Can be used for classification and regression
+  * Can work for multic-lass problems (outcome has more than two values)
+
+#### Limitations
+
+  * Cost and time
+  * Sensitive to scale of data
+  * Issues when outcome (target) has certain values at low proportion (rare event target variable)
+  * Issues when high number of predictors (features)
+  
+#### Assumptions
+
+  * Predictors (features) are standardized to prevent one influencing the distance calculation.
+  * Outliers are more important at low k-values as the distance calculation is more sensitive at these.
+  
+#### Interpretation
+
+  * ROC can be used to evaluate what k-value to use. 
+  * Can use accuracy, precision, recall, and F1 to evaluate model with classification
 
 ## Model Evaluation
+
+  * Confusion Matrix to see the True Negatives, True Positives, False Negatives, and False Positives
+  * Accuracy of a model is the proportion of correctly predicted observations. The sum of True Positives and True Negatives divided by the number of observations. Higher is better.
+  * Precision is the proportion of correctly predicted positive observations. The True Positives divided by all the Positives. 
+  * The F1 score is the weighted average of both of these. 
+  * Depending the model, outcome, and balance of outcomes, a model should prioritize some of these. F1 is good if the outcome is not balanced. If false positives and false negatives are similarly important, Accuracy is useful. If false positives and false negatives are different, then looking at both Accuracy and Precision is useful.
 
 
