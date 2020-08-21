@@ -217,6 +217,12 @@
 
 ## Model Evaluation
 
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   | True Positive  | False Positive  |   |   |
+|   | False Negative  | True Negative  |   |   |
+|   |   |   |   |   |
+
   * Confusion Matrix to see the True Negatives, True Positives, False Negatives, and False Positives
   * Accuracy of a model is the proportion of correctly predicted observations. The sum of True Positives and True Negatives divided by the number of observations. Higher is better.
   * Precision is the proportion of correctly predicted positive observations. The True Positives divided by all the Positives. 
