@@ -1,3 +1,5 @@
+# Outline
+
 ## Softwware
 
 ### SPARK
@@ -11,6 +13,9 @@
 ### Class Imbalance
   
   * Supervised learning models rely on outcomes (targets) to be balanced in distritubion. 
+  * Can collect more data
+  * Can resample
+  * Can try model that is not negatively impacted by this imbalance
 
 ## Feature Engineering
 
@@ -22,9 +27,16 @@
    
 ### Combination
 
+  * Features may be more valuable and predictive when combined with other features (counts, averages, etc.)
+
 ### Dimensionality Reduction
   
-  * Principal Components Analysis (PCA)
+  * Principal Components Analysis (PCA) will reduce predictors (features) using linear combinations
+  * A covariance matrix of the preictor variables is generated
+  * The sum of the diagnols of this covariance matrix is used to computed eigenvalues and eigenvectors
+  * These eigenvectors then represent the principal components and the eigenvalues are used to find the proportion of the total variance explained by the components
+  * A scree graph can show the proportion of variance explained by each additional eigenvalue
+  * Once chosen, PCs can be interpreted based on which variables they are most correlated with in either direction
 
 ## Feature Selection
 
@@ -81,6 +93,22 @@
 
 ### Decision Tree 
 
+#### Advantages
+
+  * Simple and easy to use/understand even with small amount of data
+  * Helpful to start with
+
+#### Disadvantages
+
+  * Unstable and small change in data can cause large change in result
+  * Relatively inaccurate compared to other models
+  * Predictors (features) with high levels are favored
+  * Can get complex
+
+#### Interpretation
+
+  * Can use accuracy, precision, recall, and F1 to evaluate model with classification
+
 ### Random Forest
 
 #### Advantages
@@ -95,7 +123,7 @@
    * Can overfit
    * Estimates of categorical predictors (features) with higher number of levels can be biased and variable importance is not always reliable.
 
-### Assumptions
+#### Assumptions
 
   * Non-parameteric so no formal assumptions. 
   
@@ -159,6 +187,13 @@
 
   * ROC can be used to evaluate what k-value to use. 
   * Can use accuracy, precision, recall, and F1 to evaluate model with classification
+  
+### Naive Bayes
+
+#### Advantages
+#### Limitations
+#### Assumptions
+#### Interpretation
 
 ## Model Evaluation
 
@@ -167,5 +202,38 @@
   * Precision is the proportion of correctly predicted positive observations. The True Positives divided by all the Positives. 
   * The F1 score is the weighted average of both of these. 
   * Depending the model, outcome, and balance of outcomes, a model should prioritize some of these. F1 is good if the outcome is not balanced. If false positives and false negatives are similarly important, Accuracy is useful. If false positives and false negatives are different, then looking at both Accuracy and Precision is useful.
+  
+# Questions
 
+## Bias vs. Variance Tradeoff
 
+  * Bias will be simplifying assumptions made by model
+  * Variance error will be amount estimates of outcome (target) will change if different data is used
+  * High Bias, Low Variance Will be consistent, but inaccurate on average
+  * High Variance, Low Bias will be accurate on average, but inconsistent
+  * Need to make balance between underfitting by simplifying model too much and overfitting by memorizing noise instead of signal.
+  
+## Bayes Theorem
+
+  * Bayes Theorem will give posterior probability of event given prior knowledge.
+  * True Positive Rate divided by sum of False Positive Rate and True Positive Rate
+  
+## Type 1 vs. Type 2 Error
+
+  * Type 1 Error is False Positive (Predict man is pregnant)
+  * Type 2 Error is False Negative (Predict pregnant woman is not pregnant)
+  
+## Cross-Validation on Time-Series
+
+  * Have to account for autocorrelation of data
+  * Forward chain to model on past data and look at forward facing data
+  
+## Regression vs. Classification
+
+  * Regression gives continous results while classification gives discrete values and categories (Is a name correlated with male/female vs. Is a name male or female)
+  
+## When to use ensemble model
+
+  * Want to reduce overfitting and make model more robust
+  * Combination and stacking of models
+  
