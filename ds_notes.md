@@ -56,6 +56,8 @@
 
 ### Linear Regression
 
+  * Can use R2 for goodness of fit (proportion of variance in outcome (target) explained by the predictors (features). Can also use residual plots and other model diagnostic techniques to look at goodness of fit.
+
 #### Assumptions
 
   * Linearity: Relationship between outcome and predictor (feature and target) is linear. Can check with a scatter plot.
@@ -76,7 +78,23 @@
   * LASSO preferred when small number of significant predictors (features) and others close to zero.
   * RIDGE preferred when large number of significant predictors (features) of similar importance.
   
+### Poisson Regression
+
+#### Assumptions
+
+  * Poisson Response: Outcome (target) is a count per unit or space
+  * Indepenence: Observations are indepenent
+  * Mean = Variance: The mean of a Poisson random variable is equal to its variance
+  * Linearity: The log of mean rate is a linear function of the outcome (target)
+
+#### 
+  
 ### Logistic Regression
+
+  * Can use Chi-Square, Classification, ROC, and model validation for goodness of fit
+  - Classificaiton tables will have sensitivity and specificity
+  - ROC curve will plot sensitivity and specificity
+  - AUC will provide probability that a random selected pair of subject will be correctly classified by test
 
 #### Assumptions
 
@@ -191,9 +209,12 @@
 ### Naive Bayes
 
 #### Advantages
+
+  * Fast, simple, and can scale to large data
+  
 #### Limitations
-#### Assumptions
-#### Interpretation
+
+ * Assumes equal importance and independence of features
 
 ## Model Evaluation
 
@@ -236,4 +257,35 @@
 
   * Want to reduce overfitting and make model more robust
   * Combination and stacking of models
+  
+## Types of Sampling
+
+  * Cluster: Population divided into groups or clusters
+  * Simple Random: With or without replacement
+  * Stratified: Population divided into groups or strata
+  * Systematical: Picking every kth observation in population
+  
+## Sampling with replacement vs. Sampling without replacement
+
+  * Sampling without replacement reduces variance
+  * As population from which sample is taken increases, sampling with replacement is not much different from sampling without replacement
+  
+## What is a P-Value
+
+  * Probability of obtaining test results as extreme as the results actually observed, given tha tht enull hypothesis is correct
+
+## What is correlation and what is covariance
+
+  * Correlation is how well two measures are related (Direction and strength of linear relationship)
+  * Covariance is how well two measures vary with one another (Direction of linaer relationship)
+  
+## Bootstrap vs. Jackknife Replication
+
+  * Bootstrap is taking X amount of samples with replacement to get estimate of true population measure
+  * Jackknife is aggregating estimates of each n-1 sized sub-samples. Will give bias and variance of estimate.
+  * Jacknife will give same results every time and are useful for verification
+
+## Sample Variance
+
+  * Variance is average of squared differences from mean
   
