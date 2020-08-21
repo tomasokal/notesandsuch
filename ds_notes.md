@@ -64,7 +64,7 @@
   * Error Terms have Normal Distribution: Errors follow normal distribution. More important for low sample sizes. Can check with QQ plot.
   * Autocorrelation: Residuals are indepenent of one another. More important in time series data. Can check with Durbin-Watson test.
 
-#### Variants
+### Variants
 
 ##### LASSO and RIDGE Regressions
 
