@@ -1,6 +1,6 @@
 # Outline
 
-## Softwware
+## Software
 
 ### SPARK
 
@@ -33,7 +33,7 @@
   
   * Principal Components Analysis (PCA) will reduce predictors (features) using linear combinations
   * A covariance matrix of the preictor variables is generated
-  * The sum of the diagnols of this covariance matrix is used to computed eigenvalues and eigenvectors
+  * The sum of the diagonals of this covariance matrix is used to computed eigenvalues and eigenvectors
   * These eigenvectors then represent the principal components and the eigenvalues are used to find the proportion of the total variance explained by the components
   * A scree graph can show the proportion of variance explained by each additional eigenvalue
   * Once chosen, PCs can be interpreted based on which variables they are most correlated with in either direction
@@ -44,7 +44,7 @@
 
   * Can check correlation of outcome (target) and predictor (feature) using various statistical tests including:
     * Peason's Correlation
-    * Linea Discriminant Analysis
+    * Linear Discriminant Analysis
     * ANOVA
     * Chi-Square
         
@@ -72,7 +72,6 @@
 
   * LASSO penalizes sum of absolute values of coeffients (L1 penalty)
   * RIDGE penalizes sum of squared coefficients (L2 penalty)
-
   * Can be used to reduce model complexity and prevent over-fitting.
   * Puts a constraint on the predictor (feature) coefficients which can address multi-collinearity.
   * LASSO preferred when small number of significant predictors (features) and others close to zero.
@@ -92,9 +91,9 @@
 ### Logistic Regression
 
   * Can use Chi-Square, Classification, ROC, and model validation for goodness of fit
-  - Classificaiton tables will have sensitivity and specificity
-  - ROC curve will plot sensitivity and specificity
-  - AUC will provide probability that a random selected pair of subject will be correctly classified by test
+    * Classification tables will have sensitivity and specificity (Sensitivity is proportion of True Positives correctly classified / Specificity is proportion of True Negatives correctly classified)
+    * ROC curve will plot sensitivity and specificity
+    * AUC will provide probability that a random selected pair of subject will be correctly classified by test
 
 #### Assumptions
 
@@ -187,7 +186,7 @@
 
   * Easy with minimal assumptions needed
   * Can be used for classification and regression
-  * Can work for multic-lass problems (outcome has more than two values)
+  * Can work for multi-class problems (outcome has more than two values)
 
 #### Limitations
 
